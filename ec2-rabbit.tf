@@ -43,7 +43,7 @@ resource "aws_instance" "rabbit" {
         type        = "ssh"
         user        = "ubuntu"
         host        = self.public_ip
-        private_key = file("~/.ssh/fiap-fase3.pem")
+        private_key = file("./fiap-fase3.pem")
         timeout     = "2m"
     }
     provisioner "remote-exec" {
